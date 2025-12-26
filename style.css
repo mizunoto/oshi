@@ -1,0 +1,174 @@
+:root {
+  color-scheme: light;
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+  background: #f5f6fb;
+  color: #1e1f28;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px 48px;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 10px 30px rgba(31, 34, 56, 0.08);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 240px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5e2;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #5b6cff;
+  color: white;
+}
+
+button.ghost {
+  background: transparent;
+  color: #5b6cff;
+  border: 1px solid #b5beff;
+}
+
+button.choice {
+  flex: 1;
+  min-height: 56px;
+  font-size: 1rem;
+}
+
+button.choice.neutral {
+  background: #f2f4ff;
+  color: #4c56a6;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.hint {
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.matchup-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  align-items: center;
+  margin: 16px 0;
+  min-height: 24px;
+}
+
+.matchup-card {
+  background: #f6f7ff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2a2f4f;
+}
+
+.matchup-card .side {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  color: #7781c0;
+  letter-spacing: 0.05em;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #eef0f6;
+  font-size: 0.95rem;
+}
+
+tbody tr:hover {
+  background: #fafbff;
+}
+
+.empty {
+  color: #9aa1b9;
+}
+
+.remove-btn {
+  background: #fff5f5;
+  color: #e05555;
+  border: 1px solid #f3b1b1;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .panel {
+    padding: 16px;
+  }
+
+  button.choice {
+    min-width: 100%;
+  }
+}
