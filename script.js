@@ -195,4 +195,23 @@ resetButton.addEventListener("click", () => {
   }
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.repeat) {
+    return;
+  }
+  if (voteAButton.disabled || voteBButton.disabled || voteDrawButton.disabled) {
+    return;
+  }
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    updateRatings(1);
+  } else if (event.key === "ArrowRight") {
+    event.preventDefault();
+    updateRatings(0);
+  } else if (event.key === "ArrowDown") {
+    event.preventDefault();
+    updateRatings(0.5);
+  }
+});
+
 refresh();
